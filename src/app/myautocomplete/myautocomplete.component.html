@@ -1,0 +1,10 @@
+<div>
+  <input type="text" [(ngModel)]="name" (keyup)="searchNames(name)" />
+  <div>
+    <ul>
+      <li *ngFor="let name of filteredData | async">
+        {{ name }}
+      </li>
+    </ul>
+  </div>
+</div>
